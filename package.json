@@ -13,5 +13,9 @@
   "bugs": {
     "url": "https://github.com/liquid-labs/yaml-inc/issues"
   },
-  "homepage": "https://github.com/liquid-labs/yaml-inc#readme"
+  "homepage": "https://github.com/liquid-labs/yaml-inc#readme",
+  "dependencies": {
+    "@liquid-labs/catalyst-scripts-node-project": "^1.0.0-alpha.18",
+    "js-yaml": "^4.1.0"
+  }
 }

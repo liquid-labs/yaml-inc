@@ -1,0 +1,3 @@
+baz: baz
+# include simple.yaml
+boo: boo
