@@ -18,3 +18,11 @@ describe('yamlLoad', () => {
 
   test('processes a 1st level include', () => expect(loadYAML(includeSimplePath)).toEqual(expectedIncludeSimple))
 })
+
+
+describe('yamlLoadAsync', () => {
+  test('loads a standard YAML file', async() => expect(await loadYAML(simplePath)).toEqual(expectedSimple))
+
+  test('processes a 1st level include', async() =>
+    expect(await loadYAML(includeSimplePath)).toEqual(expectedIncludeSimple))
+})
