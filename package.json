@@ -4,7 +4,12 @@
   "description": "",
   "main": "dist/yaml-inc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "make build",
+    "test": "make test",
+    "preversion": "make qa",
+    "lint": "make lint",
+    "lint:fix": "make lint-fix",
+    "qa": "make qa"
   },
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
@@ -13,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/liquid-labs/yaml-inc/issues"
   },
-  "homepage": "https://github.com/liquid-labs/yaml-inc#readme"
+  "homepage": "https://github.com/liquid-labs/yaml-inc#readme",
+  "dependencies": {
+    "@liquid-labs/catalyst-scripts-node-project": "^1.0.0-alpha.18",
+    "js-yaml": "^4.1.0"
+  }
 }
