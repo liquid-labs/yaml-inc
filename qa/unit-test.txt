@@ -1,0 +1,24 @@
+Test git rev: 8e04c975f1c8e247eb158cf57f95cb58fbb0dd03
+PASS test/yaml-inc.test.js
+  yamlLoad
+    ✓ loads a standard YAML file (3 ms)
+    ✓ processes a 1st level include
+    ✓ handles nested includes (1 ms)
+    ✓ handles absolute includes
+  yamlLoadAsync
+    ✓ loads a standard YAML file (1 ms)
+    ✓ processes a 1st level include
+    ✓ handles nested includes
+    ✓ handles absolute includes (1 ms)
+
+--------------|---------|----------|---------|---------|-------------------
+File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------|---------|----------|---------|---------|-------------------
+All files     |     100 |    71.42 |     100 |     100 |                   
+ yaml-inc.mjs |     100 |    71.42 |     100 |     100 | 5-22              
+--------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        0.146 s, estimated 1 s
+Ran all test suites.
