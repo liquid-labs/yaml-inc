@@ -38,9 +38,8 @@ const processContents = (contents, { absRoot = fsPath.sep, filePath }) => {
         includePath = fsPath.join(fsPath.dirname(filePath), includePath)
       }
       const incContents = readFileSync(includePath, { encoding : 'utf8' })
-      const incDir = fsPath.dirname(includePath)
 
-      const includeLines = processContents(incContents, { absRoot, filePath : incDir })
+      const includeLines = processContents(incContents, { absRoot, filePath : includePath })
       processedLines.push(...includeLines)
     }
     else {
