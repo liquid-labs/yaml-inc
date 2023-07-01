@@ -14,10 +14,10 @@ const includeSimplePath = fsPath.join(__dirname, 'data', 'include-simple.yaml')
 const expectedIncludeSimple = Object.assign({ baz : 'baz' }, expectedSimple, { boo : 'boo' })
 
 const doubleIncludePath = fsPath.join(__dirname, 'data', 'double-include.yaml')
-const expcetedDoubleInclude = Object.assign({ third: 3 }, expectedIncludeSimple)
+const expcetedDoubleInclude = Object.assign({ third : 3 }, expectedIncludeSimple)
 
 const absIncludePath = fsPath.join(__dirname, 'data', 'abs-include.yaml')
-const expectedAbsInclude = Object.assign({ abs: true }, expectedSimple)
+const expectedAbsInclude = Object.assign({ abs : true }, expectedSimple)
 
 describe('yamlLoad', () => {
   test('loads a standard YAML file', () => expect(loadYAML(simplePath)).toEqual(expectedSimple))
@@ -26,7 +26,7 @@ describe('yamlLoad', () => {
 
   test('handles nested includes', () => expect(loadYAML(doubleIncludePath)).toEqual(expcetedDoubleInclude))
 
-  test('handles absolute includes', () => expect(loadYAML(absIncludePath, { absRoot: __dirname })).toEqual(expectedAbsInclude))
+  test('handles absolute includes', () => expect(loadYAML(absIncludePath, { absRoot : __dirname })).toEqual(expectedAbsInclude))
 })
 
 describe('yamlLoadAsync', () => {
@@ -35,9 +35,9 @@ describe('yamlLoadAsync', () => {
   test('processes a 1st level include', async() =>
     expect(await loadYAMLAsync(includeSimplePath)).toEqual(expectedIncludeSimple))
 
-  test('handles nested includes', async() => 
+  test('handles nested includes', async() =>
     expect(await loadYAMLAsync(doubleIncludePath)).toEqual(expcetedDoubleInclude))
 
-  test('handles absolute includes', async() => 
-    expect(await loadYAMLAsync(absIncludePath, { absRoot: __dirname })).toEqual(expectedAbsInclude))
+  test('handles absolute includes', async() =>
+    expect(await loadYAMLAsync(absIncludePath, { absRoot : __dirname })).toEqual(expectedAbsInclude))
 })
